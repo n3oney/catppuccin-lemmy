@@ -21,4 +21,4 @@ You can use these themes in an extension like Stylus, or import them as custom t
 The project needs some help.
 Here's a list of issues you could help tackle:
  - [ ] latte variant has barely readable text on buttons
- - [ ] all variants have barely readable text on unselected buttons in button groups
+ - [x] all variants have barely readable text on unselected buttons in button groups
