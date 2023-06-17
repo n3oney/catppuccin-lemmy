@@ -4,13 +4,20 @@ colors=("rosewater" "flamingo" "pink" "mauve" "red" "maroon" "peach" "yellow" "g
 
 flavors=("macchiato" "mocha" "frappe" "latte")
 
+pids=()
+
 mkdir -p dist
 
 for flavor in ${flavors[@]}; do
+  echo "Building $flavor..."
   for color in ${colors[@]}; do
-    echo "Building $flavor-$color"
-    sass --style=compressed src/flavors/${flavor}/${color}.scss dist/${flavor}-${color}.css
+    sass --no-source-map --style=compressed src/flavors/${flavor}/${color}.scss dist/${flavor}-${color}.css &
+    pids+=($!)
   done
-done
 
-rm dist/*.css.map
+  for pid in "${pids[@]}"; do
+    wait $pid
+  done
+
+  pids=()
+done
