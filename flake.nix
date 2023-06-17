@@ -19,11 +19,16 @@
           mkShell {
             buildInputs = [
               nodejs
+              alejandra
             ];
 
             shellHook = ''PATH="$PWD/node_modules/.bin:$PATH"'';
           };
+
+        packages = rec {
+          catppuccin-lemmy = pkgs.callPackage ./nix {};
+          default = catppuccin-lemmy;
+        };
       }
     );
 }
-
