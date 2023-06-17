@@ -1,0 +1,37 @@
+hr,
+.border-light {
+  border-color: $gray-800 !important;
+}
+
+.navbar {
+  background: $black;
+}
+
+.nav-link,
+.navbar-brand {
+  color: $gray-100 !important;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: $white !important;
+}
+
+.dropdown-content {
+  background: $black;
+  box-shadow: none;
+  border: 1px solid $gray-800;
+  border-radius: 0.5rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+
+.dropdown-content > .nav-item {
+  padding: 0 6px;
+}
+
+.thumbnail {
+  background-color: $gray-800 !important;
+  color: $gray-400 !important;
+}

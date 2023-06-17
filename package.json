@@ -1,0 +1,15 @@
+{
+  "name": "catppuccin-lemmy",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "keywords": [ "catppuccin", "lemmy", "theme" ],
+  "author": "n3oney",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "sass": "^1.63.4"
+  }
+}
